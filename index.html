@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendamento Pet</title>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <hgroup>
+        <h1 class="title">Sua agenda</h1>
+        <h2 class="description">Aqui você pode ver todos os clientes e serviços agendados para hoje.</h2>
+      </hgroup>
+      <fieldset>
+        <input type="date" />
+      </fieldset>
+    </header>
+
+    <main>
+      <div class="card">
+        <header>
+          <div class="period">Manhã</div>
+          <div class="range-hour">09h-12h</div>
+        </header>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+
+        <div class="card">
+          <header>
+            <div class="period">Tarde</div>
+            <div class="range-hour">09h-12h</div>
+          </header>
+          <div class="line">
+            <div class="col-hour">09:00</div>
+            <div class="col-who">Thor / Fernanda Costa</div>
+            <div class="col-service">Vacinação</div>
+            <div class="col-control"><a href="#">Remover agendamento</a></div>
+          </div>
+          <div class="line">
+            <div class="col-hour">09:00</div>
+            <div class="col-who">Thor / Fernanda Costa</div>
+            <div class="col-service">Vacinação</div>
+            <div class="col-control"><a href="#">Remover agendamento</a></div>
+          </div>
+      </div>
+
+      <div class="btn-container">
+        <button class="btn-primary">NOVO AGENDAMENTO</button>
+      </div>
+
+      
+      <div class="modal">
+        <a href="#">Fechar</a>
+        <h3 class="title">Agende um atendimento</h3>
+        <p class="description">Preencha os dados do cliente para realizar o agendamento:</p>
+
+        <form action="">
+          <div class="line">
+            <label for="">Nome do tutor</label>
+            <input type="text" class="" id="" />
+          </div>
+
+          <div class="line">
+            <label for="">Nome do pet</label>
+            <input type="text" class="" id="" />
+          </div>
+
+          <div class="line">
+            <label for="">Telefone</label>
+            <input type="text" class="" id="" />
+          </div>
+          
+          <div class="line">
+            <label for="">Descrição do serviço</label>
+            <textarea name="" id=""></textarea>
+          </div>
+
+          <div class="line">
+            <div class="col">
+              <label for="">Data</label>
+              <input name="" id="" />
+            </div>
+            <div class="col">
+              <label for="">Hora</label>
+              <input name="" id="" />
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button class="btn">Agendar</button>
+          </div>
+        </form>
+      </div>
+      
+    </main>
+  </div>
+</body>
+</html>
