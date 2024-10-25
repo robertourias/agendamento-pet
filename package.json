@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Projeto para agendamento em petshop",
   "main": "src/main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+ "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve",
+    "server": "json-server --watch server.json --port 3333"
   },
   "keywords": [
     "petshop"
