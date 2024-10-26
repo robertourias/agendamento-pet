@@ -38,14 +38,24 @@
 
       .col-hour {
         width: 45px;
+        font: var(--label-md);
+        color: var(--content-primary);
       }
 
       .col-who {
         width: 200px;
+        font: var(--label-sm);
+        color: var(--content-primary);
+
+        span {
+          color: var(--content-secondary);
+        }
       }
 
       .col-service {
         width: 160px;
+        color: var(--content-secondary);
+        font: var(--label-sm);
       }
 
       .col-control {
