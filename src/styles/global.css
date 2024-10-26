@@ -33,6 +33,7 @@
 }
 
 body {
+  position: relative;
   font: var(--p-md);
   color: var(--content-primary);
   background-color: #14151D;

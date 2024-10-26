@@ -1,0 +1,17 @@
+.btn-container {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.btn-primary {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: var(--background-brand);
+  color: #050505;
+  font: var(--label-lg);  
+
+  &:hover {
+    background-color: var(--background-highlights);
+  }
+}
