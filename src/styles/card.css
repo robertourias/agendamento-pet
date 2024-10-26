@@ -14,10 +14,43 @@
       display: flex;
       align-items: center;
       gap: 12px;
+      font: var(--label-lg);
+      color: var(--content-primary);
+    }
+
+    .range-hour {
+      font: var(--label-lg);
+      color: var(--content-secondary);
     }
   }
 
-  .line {
-    
+  .data {
+    padding: 20px;
+
+    .line {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      justify-content: space-between;
+      
+      padding: 16px 12px;
+      border-bottom: 1px solid var(--border-primary);
+
+      .col-hour {
+        width: 45px;
+      }
+
+      .col-who {
+        width: 200px;
+      }
+
+      .col-service {
+        width: 160px;
+      }
+
+      .col-control {
+        margin-left: auto;
+      }
+    }
   }
 }
