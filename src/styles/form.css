@@ -15,3 +15,37 @@
     background-color: var(--background-highlights);
   }
 }
+
+label {
+
+}
+
+fieldset {
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  padding: 12px;
+  background: url('../assets/arrow.svg') no-repeat calc(100% - 12px) center; 
+
+  input {
+    all: unset;
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+    font: var(--p-lg);
+    color: var(--content-secondary);
+    padding-left: 12px;
+
+    &::-webkit-calendar-picker-indicator {
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    &[type="date"], &[type="date"] {
+      
+    }
+  }
+}
