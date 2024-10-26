@@ -2,6 +2,11 @@
   position: relative;
   max-width: 711px;
   margin: 0 auto;
+  padding: 12px 20px 60px;
+
+  @media (width > 768px) {
+    padding: 0;
+  }
 }
 
 .logo {
@@ -17,9 +22,16 @@
 
 .header {
   display: flex;
-  align-items: center;
+  flex-direction: column;  
   justify-content: space-between;
   margin-bottom: 32px;
+  align-items: flex-start;
+  gap: 16px;
+
+  @media (width > 768px) {
+    flex-direction: row;    
+    align-items: center;
+  }
 }
 
 main {

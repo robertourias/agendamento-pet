@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
 </head>
-<body>
+<body class="active-modal">
   <a href="/" class="logo"><img src="./src/assets/logo.svg" alt="Mundo Pet"></a>
 
   <div class="btn-container">
@@ -98,55 +98,77 @@
             <div class="col-control"><a href="#">Remover agendamento</a></div>
           </div>
         </div>
+      </div>
+    </main>
+
+    <div class="modal">
+      <a href="#" class="close"><img src="./src/assets/close.svg" alt="Fechar"></a>
+      <h3 class="title">Agende um atendimento</h3>
+      <p class="description">Preencha os dados do cliente para realizar o agendamento:</p>
+
+      <form action="">
+        <div class="line">
+          <div class="col">
+            <label for="">Nome do tutor</label>
+            <fieldset>
+              <img src="./src/assets/tutor.svg" alt="" />            
+              <input type="text" class="" id="" />
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="col">
+            <label for="">Nome do pet</label>
+            <fieldset>
+              <img src="./src/assets/pet.svg" alt="" />            
+              <input type="text" class="" id="" />
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="line">
+          <div class="col">
+            <label for="">Telefone</label>
+            <fieldset>
+              <img src="./src/assets/phone.svg" alt="" />            
+              <input type="text" class="" id="" placeholder="(00) 0 0000-0000" />
+            </fieldset>
+          </div>
+        </div>
+        
+        <div class="line">
+          <div class="col">
+            <label for="">Descrição do serviço</label>
+            <fieldset>
+              <textarea name="" id=""></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="line two-column">
+          <div class="col">
+            <label for="">Data</label>
+            <fieldset>
+              <img src="./src/assets/calendar.svg" alt="" />            
+              <input type="date" class="" id="" />
+            </fieldset>
+          </div>
+          <div class="col">
+            <label for="">Hora</label>
+            <fieldset>
+              <img src="./src/assets/clock.svg" alt="" />            
+              <input type="date" class="" id="" />
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <button class="btn-primary">Agendar</button>
+        </div>
+      </form>
     </div>
 
-      
-
-      
-      <div class="modal">
-        <a href="#">Fechar</a>
-        <h3 class="title">Agende um atendimento</h3>
-        <p class="description">Preencha os dados do cliente para realizar o agendamento:</p>
-
-        <form action="">
-          <div class="line">
-            <label for="">Nome do tutor</label>
-            <input type="text" class="" id="" />
-          </div>
-
-          <div class="line">
-            <label for="">Nome do pet</label>
-            <input type="text" class="" id="" />
-          </div>
-
-          <div class="line">
-            <label for="">Telefone</label>
-            <input type="text" class="" id="" />
-          </div>
-          
-          <div class="line">
-            <label for="">Descrição do serviço</label>
-            <textarea name="" id=""></textarea>
-          </div>
-
-          <div class="line">
-            <div class="col">
-              <label for="">Data</label>
-              <input name="" id="" />
-            </div>
-            <div class="col">
-              <label for="">Hora</label>
-              <input name="" id="" />
-            </div>
-          </div>
-
-          <div class="buttons">
-            <button class="btn">Agendar</button>
-          </div>
-        </form>
-      </div>
-      
-    </main>
   </div>
 </body>
 </html>

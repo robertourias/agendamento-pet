@@ -30,22 +30,39 @@
     .line {
       display: flex;
       align-items: center;
-      gap: 30px;
-      justify-content: space-between;
-      
+      gap: 16px;
+      justify-content: flex-start;
       padding: 16px 12px;
       border-bottom: 1px solid var(--border-primary);
 
+      flex-wrap: wrap;
+
+      @media (width > 768px) {
+        flex-wrap: no-wrap;
+        justify-content: space-between;
+        gap: 30px;
+      }
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
       .col-hour {
-        width: 45px;
         font: var(--label-md);
         color: var(--content-primary);
+        
+        @media (width > 768px) {
+          width: 45px;          
+        }
       }
 
       .col-who {
-        width: 200px;
         font: var(--label-sm);
         color: var(--content-primary);
+        
+        @media (width > 768px) {
+          width: 200px;          
+        }
 
         span {
           color: var(--content-secondary);
@@ -53,9 +70,13 @@
       }
 
       .col-service {
-        width: 160px;
         color: var(--content-secondary);
         font: var(--label-sm);
+        width: 100%;
+        
+        @media (width > 768px) {
+          width: 160px;
+        }
       }
 
       .col-control {

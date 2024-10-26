@@ -1,7 +1,25 @@
 .btn-container {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  top: 100vh;
+  right: 0;
+  width: 100%;
+  z-index: 9;
+  transform: translateY(-100%);
+  background: var(--background-tertiary);
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+
+  @media (width > 768px) {
+    top: auto;
+    width: auto;;
+    bottom: 30px;
+    right: 30px;
+    transform: translateY(0);
+    background: transparent;
+    padding: 0;    
+    display: block;
+  }
 }
 
 .btn-primary {
@@ -16,8 +34,38 @@
   }
 }
 
-label {
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 28px 0 0;
+  overflow-y: auto;
+  height: 60vh;
 
+  @media (width > 768px) {
+    height: auto;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &.two-column {
+      @media (width > 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+      }
+    }
+  }
+}
+
+label {
+  display: flex;
+  color: var(--content-primary);
+  font: var(--p-md);
+  margin-bottom: 4px;
 }
 
 fieldset {
@@ -28,9 +76,8 @@ fieldset {
   justify-content: flex-start;
   gap: 5px;
   padding: 12px;
-  background: url('../assets/arrow.svg') no-repeat calc(100% - 12px) center; 
 
-  input {
+  input, textarea {
     all: unset;
     appearance: none;
     border: 0;
@@ -38,14 +85,25 @@ fieldset {
     font: var(--p-lg);
     color: var(--content-secondary);
     padding-left: 12px;
+    flex: 1;
 
     &::-webkit-calendar-picker-indicator {
       opacity: 0;
       cursor: pointer;
     }
 
-    &[type="date"], &[type="date"] {
-      
+    &[type="date"], &[type="hour"] {
+      background: url('../assets/arrow.svg') no-repeat calc(100% - 12px) center; 
     }
+  }
+}
+
+.buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+
+  button {
+    width: auto;
   }
 }
