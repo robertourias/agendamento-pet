@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agendamento Pet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <a href="/" class="logo"><img src="./src/assets/logo.svg" alt="Mundo Pet"></a>
+  
   <div class="container">
     <header class="header">
       <hgroup>
@@ -20,7 +27,10 @@
     <main>
       <div class="card">
         <header>
-          <div class="period">Manhã</div>
+          <div class="period">
+            <img src="./src/assets/morning.svg" alt="">
+            Manhã
+          </div>
           <div class="range-hour">09h-12h</div>
         </header>
         <div class="line">
@@ -35,25 +45,49 @@
           <div class="col-service">Vacinação</div>
           <div class="col-control"><a href="#">Remover agendamento</a></div>
         </div>
-
-        <div class="card">
-          <header>
-            <div class="period">Tarde</div>
-            <div class="range-hour">09h-12h</div>
-          </header>
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costa</div>
-            <div class="col-service">Vacinação</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costa</div>
-            <div class="col-service">Vacinação</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
       </div>
+      <div class="card">
+        <header>
+          <div class="period">
+            <img src="./src/assets/afternoon.svg" alt="">              
+            Tarde
+          </div>
+          <div class="range-hour">09h-12h</div>
+        </header>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+      </div>
+      <div class="card">
+        <header>
+          <div class="period">
+            <img src="./src/assets/night.svg" alt="">              
+            Noite
+          </div>
+          <div class="range-hour">09h-12h</div>
+        </header>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+        <div class="line">
+          <div class="col-hour">09:00</div>
+          <div class="col-who">Thor / Fernanda Costa</div>
+          <div class="col-service">Vacinação</div>
+          <div class="col-control"><a href="#">Remover agendamento</a></div>
+        </div>
+    </div>
 
       <div class="btn-container">
         <button class="btn-primary">NOVO AGENDAMENTO</button>

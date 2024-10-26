@@ -1,0 +1,28 @@
+.container {
+  max-width: 711px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 153px;
+  padding: 12px 20px;
+  border-bottom-right-radius: 12px;
+  background-color: #2E2C30;
+  margin-bottom: 14px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
