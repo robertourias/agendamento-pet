@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
 </head>
-<body class="active-modal">
+<body class="active-modalAA">
   <a href="/" class="logo"><img src="./src/assets/logo.svg" alt="Mundo Pet"></a>
 
   <div class="btn-container">
@@ -25,7 +25,7 @@
       </hgroup>
       <fieldset>
         <img src="./src/assets/calendar.svg" alt="Calendário" />
-        <input type="date" title="Data" />
+        <input type="date" title="Data" id="day-list" />
       </fieldset>
     </header>
 
@@ -38,8 +38,8 @@
           </div>
           <div class="range-hour">09h-12h</div>
         </header>
-        <div class="data">
-          <div class="line">
+        <div class="data" id="morning">
+          <!-- <div class="line">
             <div class="col-hour">09:00</div>
             <div class="col-who">Thor / <small>Fernanda Costa</small></div>
             <div class="col-service">Vacinação</div>
@@ -50,7 +50,7 @@
             <div class="col-who">Thor / <small>Fernanda Costa</small></div>
             <div class="col-service">Vacinação</div>
             <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="card">
@@ -61,20 +61,7 @@
           </div>
           <div class="range-hour">09h-12h</div>
         </header>
-        <div class="data">
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costa</div>
-            <div class="col-service">Vacinação</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costa</div>
-            <div class="col-service">Vacinação</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
-        </div>
+        <div class="data" id="afternoon"></div>
       </div>
       <div class="card">
         <header>
@@ -84,20 +71,7 @@
           </div>
           <div class="range-hour">09h-12h</div>
         </header>
-        <div class="data">
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costawerqwerqwer</div>
-            <div class="col-service">Vaci</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
-          <div class="line">
-            <div class="col-hour">09:00</div>
-            <div class="col-who">Thor / Fernanda Costa</div>
-            <div class="col-service">Vacinação</div>
-            <div class="col-control"><a href="#">Remover agendamento</a></div>
-          </div>
-        </div>
+        <div class="data" id="evening"></div>
       </div>
     </main>
 

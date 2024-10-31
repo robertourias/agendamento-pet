@@ -13,16 +13,14 @@ body {
       backdrop-filter: blur(6px);
       z-index: 9;
     }
-  }
-}
 
-.active-modal {
-  .modal {
-    display: block;
-  }
-
-  .btn-container {
-    display: none;
+    .modal {
+      display: block;
+    }
+  
+    .btn-container {
+      display: none;
+    }
   }
 }
 
@@ -39,6 +37,7 @@ body {
   max-width: 510px;
   margin: 22px auto;
   z-index: 99;
+  display: none;
 
   @media (width > 768px) {
     padding: 36px 40px;
