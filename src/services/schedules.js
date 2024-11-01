@@ -3,7 +3,7 @@ import { apiConfig } from "./api-config.js";
 
 export async function schedulesByDay({ date }) {
   try {
-    const result = await fetch(`${apiConfig.baseURL}/schedules`);
+    const result = await fetch(`${apiConfig.baseURL}/agendamento-pet`);
     const data = await result.json();
     const dailySchedules = data.filter(schedule => dayjs(date).isSame(schedule.when, "day"));
 
@@ -17,7 +17,7 @@ export async function schedulesByDay({ date }) {
 export async function schedulesByID({ id }) {
   console.log("ID da agenda", id)
   try {
-    const result = await fetch(`${apiConfig.baseURL}/schedules/${id}`);
+    const result = await fetch(`${apiConfig.baseURL}/agendamento-pet/${id}`);
     const data = await result.json();
     return data;
   } catch (e) {
@@ -29,7 +29,7 @@ export async function schedulesByID({ id }) {
 export async function schedulePost({ tutor, when, pet, service, phone }) {
   try {
     const id = dayjs(new Date()).format();
-    const result = await fetch(`${apiConfig.baseURL}/schedules`, {
+    const result = await fetch(`${apiConfig.baseURL}/agendamento-pet`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -48,7 +48,7 @@ export async function schedulePost({ tutor, when, pet, service, phone }) {
 export async function schedulePut({ id, tutor, when, pet, service, phone }) {
   try {    
     console.log({ id, tutor, when, pet, service, phone });
-    await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+    await fetch(`${apiConfig.baseURL}/agendamento-pet/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -64,7 +64,7 @@ export async function schedulePut({ id, tutor, when, pet, service, phone }) {
 
 export async function scheduleDelete({ id }) {
   try {    
-    await fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+    await fetch(`${apiConfig.baseURL}/agendamento-pet/${id}`, {
       method: "DELETE"
     });
     
