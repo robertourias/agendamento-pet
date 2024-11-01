@@ -1,4 +1,5 @@
 import dayjs from "dayjs";
+import { availableHours } from "../form/hour-load.js";
 import { schedulesByDay } from "../../services/schedules.js";
 import { deleteScheduleHandler } from "../schedules/delete.js";
 import { editOpenModalScheduleHandler } from "../schedules/edit.js";
@@ -17,6 +18,7 @@ export async function schedulesDay() {
   afternoonElem.innerHTML = '';
   eveningElem.innerHTML = '';
 
+  const scheduleHours = [];
   // Preencher listagem
   dailySchedules.forEach((schedule) => {   
     try {
@@ -65,13 +67,20 @@ export async function schedulesDay() {
       } else {
         eveningElem.appendChild(lineElem);
       }
+
+      scheduleHours.push(dayjs(schedule.when).format("HH") + ":00");
     } catch (err) {
       console.log(err);
     }
+
   }); 
   
   // Adiciona método de edit e delete aos links
   deleteScheduleHandler();
   editOpenModalScheduleHandler();
+
+  // Preenche novos horários disponíveis
+  availableHours(scheduleHours);
+
 }
 
