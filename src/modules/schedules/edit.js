@@ -20,10 +20,6 @@ export function editOpenModalScheduleHandler() {
           document.getElementById('phone-field').value = schedule.phone;
           document.getElementById('service-field').value = schedule.service;
           document.getElementById('date-field').value = dayjs(schedule.when).format('YYYY-MM-DD');
-          console.log(dayjs(schedule.when).format('HH:mm'));
-          const btnForm = document.getElementById('btn-form');
-
-          
         }
       } catch (e) {
         alert('Erro para editar a agenda');
