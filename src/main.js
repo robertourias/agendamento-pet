@@ -12,6 +12,8 @@ import "./styles/modal.css"
 
 
 // JS
+import "./modules/form/masks.js"
+import "./modules/form/recalc-available-hour.js"
 import "./modules/form/submit.js"
 import "./modules/form/filter-date.js"
 

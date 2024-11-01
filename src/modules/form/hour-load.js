@@ -1,11 +1,14 @@
 import { openingHours } from '../../util/opening-hours';
 
-const hourField = document.getElementById('hour-field');
-
 export function availableHours(scheduleDay) {
+  const hourField = document.getElementById('hour-field');
+  hourField.innerHTML = '';
+
  const availableHours = openingHours.filter(hour => {
   return !scheduleDay.includes(hour);
  });
+
+ console.log("availableHours", availableHours);
 
  availableHours.forEach(hour => {
   const option = document.createElement('option');

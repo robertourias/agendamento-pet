@@ -28,8 +28,7 @@ export async function schedulesByID({ id }) {
 
 export async function schedulePost({ tutor, when, pet, service, phone }) {
   try {
-    const id = dayjs(new Date().getTime()).toString();
-    console.log({ tutor, when, pet, service, phone })
+    const id = dayjs(new Date()).format();
     const result = await fetch(`${apiConfig.baseURL}/schedules`, {
       method: "POST",
       headers: {

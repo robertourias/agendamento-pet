@@ -20,7 +20,6 @@ formSchedule.onsubmit = async function (e) {
   const when = dayjs(date.format('YYYY-MM-DD')).hour(hour).minute(minute).format();
   
   const payload = { id, tutor, when, pet, phone, service }
-  console.log(payload);
 
   if (id == 0) {
     await schedulePost(payload);
