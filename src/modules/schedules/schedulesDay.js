@@ -1,5 +1,6 @@
 import dayjs from "dayjs";
 import { schedulesByDay } from "../../services/schedules.js";
+import { deleteScheduleHandler } from "../schedules/delete.js";
 
 export async function schedulesDay() {
   // Captura a data
@@ -62,6 +63,9 @@ export async function schedulesDay() {
     } catch (err) {
       console.log(err);
     }
-  });  
+  }); 
+  
+  // Adiciona método de delete aos links
+  deleteScheduleHandler();
 }
 
