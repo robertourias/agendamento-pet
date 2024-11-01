@@ -14,6 +14,18 @@ export async function schedulesByDay({ date }) {
   }
 }
 
+export async function schedulesByID({ id }) {
+  console.log("ID da agenda", id)
+  try {
+    const result = await fetch(`${apiConfig.baseURL}/schedules/${id}`);
+    const data = await result.json();
+    return data;
+  } catch (e) {
+    alert('Erro para carregar a agenda');
+    return null;
+  }
+}
+
 export async function schedulePost({ tutor, when, pet, service, phone }) {
   try {
     const id = dayjs(new Date().getTime()).toString();

@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap" rel="stylesheet">
 
 </head>
-<body class="active-modalAA">
+<body>
   <a href="/" class="logo"><img src="./src/assets/logo.svg" alt="Mundo Pet"></a>
 
   <div class="btn-container">
@@ -28,7 +28,7 @@
         <input type="date" title="Data" id="day-list" />
       </fieldset>
     </header>
-
+ 
     <main>
       <div class="card">
         <header>
@@ -70,69 +70,73 @@
     </main>
 
     <div class="modal">
-      <a href="#" class="close"><img src="./src/assets/close.svg" alt="Fechar"></a>
+      <a href="#" class="close" id="btn-close-modal"><img src="./src/assets/close.svg" alt="Fechar"></a>
       <h3 class="title">Agende um atendimento</h3>
       <p class="description">Preencha os dados do cliente para realizar o agendamento:</p>
 
       <form action="">
+        <input type="hidden" id="id-field" value="0" />
+        
         <div class="line">
           <div class="col">
-            <label for="">Nome do tutor</label>
+            <label for="tutor-field">Nome do tutor</label>
             <fieldset>
               <img src="./src/assets/tutor.svg" alt="" />            
-              <input type="text" class="" id="" />
+              <input type="text" class="" id="tutor-field" required />
             </fieldset>
           </div>
         </div>
 
         <div class="line">
           <div class="col">
-            <label for="">Nome do pet</label>
+            <label for="pet-field">Nome do pet</label>
             <fieldset>
               <img src="./src/assets/pet.svg" alt="" />            
-              <input type="text" class="" id="" />
+              <input type="text" class="" id="pet-field" required />
             </fieldset>
           </div>
         </div>
 
         <div class="line">
           <div class="col">
-            <label for="">Telefone</label>
+            <label for="phone-field">Telefone</label>
             <fieldset>
               <img src="./src/assets/phone.svg" alt="" />            
-              <input type="text" class="" id="" placeholder="(00) 0 0000-0000" />
+              <input type="text" class="" id="phone-field" placeholder="(00) 0 0000-0000" required />
             </fieldset>
           </div>
         </div>
         
         <div class="line">
           <div class="col">
-            <label for="">Descrição do serviço</label>
+            <label for="service-field">Descrição do serviço</label>
             <fieldset>
-              <textarea name="" id=""></textarea>
+              <textarea name="service" id="service-field" required></textarea>
             </fieldset>
           </div>
         </div>
 
         <div class="line two-column">
           <div class="col">
-            <label for="">Data</label>
+            <label for="date-field">Data</label>
             <fieldset>
               <img src="./src/assets/calendar.svg" alt="" />            
-              <input type="date" class="" id="" />
+              <input type="date" class="" id="date-field" required />
             </fieldset>
           </div>
           <div class="col">
-            <label for="">Hora</label>
+            <label for="hour-field">Hora</label>
             <fieldset>
-              <img src="./src/assets/clock.svg" alt="" />            
-              <input type="date" class="" id="" />
+              <img src="./src/assets/clock.svg" alt="" />
+              <select id="hour-field" required>
+                <option value="-1">horários</option>
+              </select>
             </fieldset>
           </div>
         </div>
 
         <div class="buttons">
-          <button class="btn-primary">Agendar</button>
+          <button class="btn-primary" id="btn-form">Agendar</button>
         </div>
       </form>
     </div>

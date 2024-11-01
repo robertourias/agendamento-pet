@@ -9,6 +9,7 @@
   padding: 18px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
 
   @media (width > 768px) {
     top: auto;
@@ -27,11 +28,28 @@
   border-radius: 8px;
   background-color: var(--background-brand);
   color: #050505;
-  font: var(--label-lg);  
+  font: var(--label-lg); 
+  cursor: pointer; 
 
   &:hover {
     background-color: var(--background-highlights);
   }
+}
+
+.btn-trash {
+  background: url('../assets/trash.png') no-repeat center center / contain;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
+}
+
+.btn-edit {
+  background: url('../assets/edit.png') no-repeat center center / contain;
+  display: flex;
+  height: 20px;
+  width: 20px;
+  text-indent: -9999px;
 }
 
 form {
@@ -56,6 +74,10 @@ form {
         flex-direction: row;
         justify-content: space-between;
         gap: 16px;
+        
+        .col {
+          width: 50%;
+        }
       }
     }
   }
@@ -76,8 +98,9 @@ fieldset {
   justify-content: flex-start;
   gap: 5px;
   padding: 12px;
+  cursor: pointer;
 
-  input, textarea {
+  input, textarea, select {
     all: unset;
     appearance: none;
     border: 0;

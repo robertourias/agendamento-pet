@@ -1,6 +1,7 @@
 import dayjs from "dayjs";
 import { schedulesByDay } from "../../services/schedules.js";
 import { deleteScheduleHandler } from "../schedules/delete.js";
+import { editOpenModalScheduleHandler } from "../schedules/edit.js";
 
 export async function schedulesDay() {
   // Captura a data
@@ -28,6 +29,7 @@ export async function schedulesDay() {
       const serviceElem = document.createElement("div");
       const controlElem = document.createElement("div");
       const linkDelete = document.createElement("a");
+      const linkEdit = document.createElement("a");
       
       lineElem.classList.add("line");
       hourElem.classList.add("col-hour");    
@@ -36,7 +38,10 @@ export async function schedulesDay() {
       controlElem.classList.add("col-control");
       linkDelete.setAttribute("href", "#")
       linkDelete.setAttribute("data-id", schedule.id);      
-      linkDelete.textContent = "Remover agendamento";
+      linkDelete.classList.add('btn-trash');
+      linkEdit.setAttribute("href", "#")
+      linkEdit.setAttribute("data-id", schedule.id);      
+      linkEdit.classList.add('btn-edit');
       
       hourElem.textContent = hour;
       tutorElem.textContent = schedule.tutor;
@@ -44,12 +49,12 @@ export async function schedulesDay() {
       serviceElem.textContent = schedule.service;
       
       // Adicionando tags na div linha
-      lineElem.append(hourElem);
-      lineElem.append(whoElem);
-      lineElem.append(serviceElem);
-      lineElem.append(controlElem);
+      lineElem.appendChild(hourElem);
+      lineElem.appendChild(whoElem);
+      lineElem.appendChild(serviceElem);
+      lineElem.appendChild(controlElem);
       whoElem.appendChild(tutorElem);
-      controlElem.append(linkDelete);
+      controlElem.append(linkEdit, linkDelete);
 
       const hourParsed = parseInt(hour.substring(0,2));
 
@@ -65,7 +70,8 @@ export async function schedulesDay() {
     }
   }); 
   
-  // Adiciona método de delete aos links
+  // Adiciona método de edit e delete aos links
   deleteScheduleHandler();
+  editOpenModalScheduleHandler();
 }
 
