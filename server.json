@@ -58,7 +58,7 @@
     },
     {
       "tutor": "Nathalia",
-      "when": "2024-11-01T18:00:00-03:00",
+      "when": "2024-11-01T09:00:00-03:00",
       "pet": "Kiara",
       "service": "Banho e tosa",
       "phone": "11980927661",
@@ -71,6 +71,14 @@
       "pet": "Fred",
       "phone": "11980927661",
       "service": "Banho e tosa"
+    },
+    {
+      "tutor": "BEto",
+      "when": "2024-11-01T14:00:00-03:00",
+      "pet": "Fred",
+      "service": "teste de cadastro",
+      "phone": "11980927661",
+      "id": "Fri, 01 Nov 2024 18:57:01 GMT"
     }
   ]
 }
